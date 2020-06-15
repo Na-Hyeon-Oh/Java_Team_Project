@@ -20,16 +20,49 @@ Omok -> MainFrame -> GameFrame -> ResultDialog
             ↓↑          ↓↑
       ReStringDialog  RePutDialog
          
+수업에서 배운 것 활용 : 
+
+1. Class
+- 객체 지향적인 프로그래밍을 위해 한 프로그램을 비슷한 용도의 패키지로 나누고, 여러 클래스로 세분화하였다. 
+각각의 클래스들은 필요한 JFrame, JDialog, Thread 클래스를 상속받았으며, MouseListener, MouseMotionListenr, ActionListenr, WindowListener 인터페이스를 구현하였다.
+
+2. JAVA API
+- 삼삼, 사사를 검사하는 소스를 만들기 위해 ArrayList와 HashMap을 사용
+- 게임 결과 저정 시, 파일 이름에 현재 날짜를 받아오기 위해 Calender 사용
+
+3. Exception Handling
+- 시간 제한 쓰레드에서 시간 제한이 끝나기 전에 돌을 놓았을 때, 쓰레드를 종료하기 위해서 예외처리를 사용하였다.
+- 파일 입출력 시 예외처리를 해주었다.
+
+4. File I/O
+- 게임 결과를 TXT 파일로 저장
+
+5. GUI
+- 플레이어가 오목 게임을 하기 전의 플레이어 이름 적는 창
+- 플레이어가 오목 게임을 할 때 볼 오목판과 흑, 백돌, 남은 시간
+...
+
+6. Mouse Event
+- 마우스 클릭 이벤트가 게임을 진행한다. GameFrame 클래스에서 MouseListener 클래스를 구현하였다.
+
+7. Thread
+- 돌을 두는 데 시간 제한을 둬야 했기에 이를 Thread를 이용하여 구현하였다. 
+1초간 sleep을 하여 while문을 돌고 GUI에는 남은 시간 제한을 표시한다.
+
+
 Description of Src Code :
 
 1. Class Omok, MainFrame
 - 게임 실행
 - 사용자 이름을 입력받아 GameFrame에 전달
+
 2. Class ReStringDialog, RePutDialog
 - 이름을 다시 입력받아야 하는 상황 발생 시, 메시지 띄워줌
+
 3. Class ResultDialog, DrawDialog
 - 게임 결과 뛰워줌
 - 게임 결과를 File I/O를 이용하여 txt 파일로 저장
+
 4. Class GameFrame
 String[] playerName boolean whoseTurn // true: 흑 차례, false: 백 차례
 boolean isClickCorrect // GUI 상의 오목판을 적절하게 클릭했는지 판단하기 위한 변수
@@ -134,3 +167,14 @@ void mouseMoved(MouseEvent E)
 void setGameScreen()  
   -변수 설정
   -GUI 설정
+
+5. Class IsTimeOver extends Thread
+-GameFrame 클래스의 내부 클래스
+-60초의 시간 제한 생성
+-남은 시간 제한 GUI 에 표시
+-interrupt 당했을 때, 차례를 넘기고 종료
+ 
+6. Class ProgressTimer extends Thread  
+-GameFrame 클래스의 내부 클래스 
+-게임 진행 시간 증가
+-게임 진행 시간 GUI 에 표시
