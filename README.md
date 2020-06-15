@@ -1,10 +1,9 @@
-# Java_Team_Project
-
-team2 #final project game_2
+# final project game_2
 
 Project Name : Omok(오목)
 
 Project Description : 
+
 
 # Game Rule : 
 
@@ -12,6 +11,7 @@ Project Description :
 - 흑, 백 모두 3*3(삼삼)을 금수 처리한다.
 - 4*4(사사)는 흑, 백 모두 둘 수 있는 형태이다.
 - 장목(6목 이상)은 흑, 백 모두 둘 수는 있되, 승패에 영향은 없다.
+
 
 # HowtoCompile
 
@@ -49,7 +49,7 @@ Omok.src에서 ctrl+F11 이용
 1초간 sleep을 하여 while문을 돌고 GUI에는 남은 시간 제한을 표시한다.
 
 
-Description of Src Code : _ main code 위주로
+# Execution:) Description of Src Code : _ main code 위주로
 
 1. Class Omok, MainFrame
 - 게임 실행
