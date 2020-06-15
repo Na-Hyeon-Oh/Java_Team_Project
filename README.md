@@ -40,6 +40,7 @@ Omok -> MainFrame -> GameFrame -> ResultDialog
 5. GUI
 - 플레이어가 오목 게임을 하기 전의 플레이어 이름 적는 창
 - 플레이어가 오목 게임을 할 때 볼 오목판과 흑, 백돌, 남은 시간
+- 게임 중, 삼삼, 사사, 장목의 경우 알림창
 ...
 
 6. Mouse Event
