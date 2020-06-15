@@ -6,21 +6,19 @@ Project Name : Omok(오목)
 
 Project Description : 
 
-Game Rule : 
+# Game Rule : 
 
 오목 게임은 일반 대중들에게 잘 알려져 있듯, 오목판, 흑돌, 백돌이 있고, 흑부터 시작하여 한 수씩 돌을 두어 먼저 5목을 만드는 쪽이 이기는 2인용 게임이다. 다음과 같이 일반적으로 알려져 있는 룰을 기준으로 구현하였다.
 - 흑, 백 모두 3*3(삼삼)을 금수 처리한다.
 - 4*4(사사)는 흑, 백 모두 둘 수 있는 형태이다.
 - 장목(6목 이상)은 흑, 백 모두 둘 수는 있되, 승패에 영향은 없다.
 
-Flow Chart :
+# HowtoCompile
 
-Omok -> MainFrame -> GameFrame -> ResultDialog
-                               -> DrawDialog
-            ↓↑          ↓↑
-      ReStringDialog  RePutDialog
+Omok.src에서 ctrl+F11 이용
+
          
-수업에서 배운 것 활용 : 
+# 수업에서 배운 것 활용 : 
 
 1. Class
 - 객체 지향적인 프로그래밍을 위해 한 프로그램을 비슷한 용도의 패키지로 나누고, 여러 클래스로 세분화하였다. 
